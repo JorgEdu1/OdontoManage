@@ -57,7 +57,9 @@ Crie o .env na raiz do projeto e configure suas credenciais de conexão com o ba
 
 https://github.com/user-attachments/assets/9a450a7b-70eb-46e1-8af1-cfc5e9efa37b
 
+## Repositório do back-end 
 
+https://github.com/AntDeivid/OdontoManage
 
 ## Autores
 - [@kaynan951](https://github.com/kaynan951)
