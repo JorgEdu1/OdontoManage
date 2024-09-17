@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-17T01:23:54.312Z",
+    "end": "2024-09-17T01:24:24.068Z",
+    "duration": 29756,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cd0f96d0-b3ed-44e3-b518-acb7f106447c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\OdontoManage\\PatientsSpec.cy.js",
+      "file": "cypress\\e2e\\OdontoManage\\PatientsSpec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1826b8d2-96f8-4436-ae6a-fc9028492866",
+          "title": "OdontoManage Patients",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "criar um novo paciente",
+              "fullTitle": "OdontoManage Patients criar um novo paciente",
+              "timedOut": null,
+              "duration": 9376,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em pacientes\ncy.get('a[href=\"/patients\"]').click();\n//verifica se ta na rota de /patients\ncy.url().should('include', '/patients');\n//clica em botao de Novo Paciente\ncy.get('button').contains('Novo Paciente').click();\n//preenche os campos\ncy.get('input[id=\"name\"]').type('Paciente Teste');\n//clica no radio button de masculino\ncy.contains('Masculino').click();\n//preenche os campos de data de nascimento\ncy.get('input[id=\"birthDate\"]').type('29/05/2002');\n//preenche o campo de cpf \ncy.get('input[id=\"cpf\"]').type('12345678901');\n//preenche o campo de rg\ncy.get('input[id=\"rg\"]').type('123456789');\n//preenche o campo de telefone\ncy.get('input[id=\"phone\"]').type('123456789');\n//preenche o campo de cep\ncy.get('input[id=\"cep\"]').type('12345678');\n//preenche o campo de rua\ncy.get('input[id=\"street\"]').type('Rua Teste');\n//preenche o campo de bairro\ncy.get('input[id=\"neighborhood\"]').type('Bairro Teste');\n//preenche o campo de cidade\ncy.get('input[id=\"city\"]').type('Cidade Teste');\n//preenche o campo de estado\ncy.get('input[id=\"state\"]').type('Estado Teste');\n//clica no botao de Cadastrar\ncy.get('button').contains('Cadastrar').click();\n//verifica se o paciente foi criado\ncy.contains('Paciente Teste');",
+              "err": {},
+              "uuid": "ce7cd132-08fb-48ff-8317-4e577962dfb9",
+              "parentUUID": "1826b8d2-96f8-4436-ae6a-fc9028492866",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deletar um paciente e verificar se o toast esta correto: Sucesso",
+              "fullTitle": "OdontoManage Patients deletar um paciente e verificar se o toast esta correto: Sucesso",
+              "timedOut": null,
+              "duration": 7223,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em pacientes\ncy.get('a[href=\"/patients\"]').click();\n//verifica se ta na rota de /patients\ncy.url().should('include', '/patients');\n//clica no botao de deletar\ncy.get('div').contains('Paciente Teste').parent().parent().find('td').find('svg').eq(1).click();\n//confirma a exclusao\ncy.get('button').contains('Sim').click();\n//verifica se o paciente foi deletado\ncy.contains('Sucesso');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sucesso' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sucesso' but never did.\n    at Context.eval (webpack:///./cypress/e2e/OdontoManage/PatientsSpec.cy.js:86:11)",
+                "diff": null
+              },
+              "uuid": "761e2b0f-2bfe-44af-a6f3-da6c05a86dca",
+              "parentUUID": "1826b8d2-96f8-4436-ae6a-fc9028492866",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "criar um novo paciente",
+              "fullTitle": "OdontoManage Patients criar um novo paciente",
+              "timedOut": null,
+              "duration": 7172,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em pacientes\ncy.get('a[href=\"/patients\"]').click();\n//verifica se ta na rota de /patients\ncy.url().should('include', '/patients');\n//clica em botao de Novo Paciente\ncy.get('button').contains('Novo Paciente').click();\n//preenche os campos\ncy.get('input[id=\"name\"]').type('Paciente Teste');\n//clica no radio button de masculino\ncy.contains('Masculino').click();\n//preenche os campos de data de nascimento\ncy.get('input[id=\"birthDate\"]').type('29/05/2002');\n//preenche o campo de cpf \ncy.get('input[id=\"cpf\"]').type('12345678901');\n//preenche o campo de rg\ncy.get('input[id=\"rg\"]').type('123456789');\n//preenche o campo de telefone\ncy.get('input[id=\"phone\"]').type('123456789');\n//preenche o campo de cep\ncy.get('input[id=\"cep\"]').type('12345678');\n//preenche o campo de rua\ncy.get('input[id=\"street\"]').type('Rua Teste');\n//preenche o campo de bairro\ncy.get('input[id=\"neighborhood\"]').type('Bairro Teste');\n//preenche o campo de cidade\ncy.get('input[id=\"city\"]').type('Cidade Teste');\n//preenche o campo de estado\ncy.get('input[id=\"state\"]').type('Estado Teste');\n//clica no botao de Cadastrar\ncy.get('button').contains('Cadastrar').click();\n//verifica se o paciente foi criado\ncy.contains('Paciente Teste');",
+              "err": {},
+              "uuid": "480e2454-26c8-4dac-9ad6-4e39a0fbaf7e",
+              "parentUUID": "1826b8d2-96f8-4436-ae6a-fc9028492866",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deletar um paciente e verificar se o nome do paciente sumiu",
+              "fullTitle": "OdontoManage Patients deletar um paciente e verificar se o nome do paciente sumiu",
+              "timedOut": null,
+              "duration": 4210,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em pacientes\ncy.get('a[href=\"/patients\"]').click();\n//verifica se ta na rota de /patients\ncy.url().should('include', '/patients');\n//clica no botao de deletar\ncy.get('div').contains('Paciente Teste').parent().parent().find('td').find('svg').eq(1).click();\n//confirma a exclusao\ncy.get('button').contains('Sim').click();\n//verifica se o paciente foi deletado\ncy.contains('Paciente Teste').should('not.exist');",
+              "err": {},
+              "uuid": "8f62313a-b993-4f20-bcaf-2baac549ff38",
+              "parentUUID": "1826b8d2-96f8-4436-ae6a-fc9028492866",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce7cd132-08fb-48ff-8317-4e577962dfb9",
+            "480e2454-26c8-4dac-9ad6-4e39a0fbaf7e",
+            "8f62313a-b993-4f20-bcaf-2baac549ff38"
+          ],
+          "failures": [
+            "761e2b0f-2bfe-44af-a6f3-da6c05a86dca"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27981,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-17T01:37:17.412Z",
+    "end": "2024-09-17T01:37:35.596Z",
+    "duration": 18184,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d7937f88-b13c-4709-826b-2cee6504a7fd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\OdontoManage\\StockSpec.cy.js",
+      "file": "cypress\\e2e\\OdontoManage\\StockSpec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96f05116-0814-44ff-ae70-19b4039c866a",
+          "title": "OdontoManage Stock",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "criar um novo produto",
+              "fullTitle": "OdontoManage Stock criar um novo produto",
+              "timedOut": null,
+              "duration": 5759,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em estoque\ncy.get('a[href=\"/stock\"]').click();\n//verifica se ta na rota de /stock\ncy.url().should('include', '/stock');\n//clica em botao de Novo Produto\\\ncy.get('button').contains('Novo Produto').click();\n//preenche os campos\ncy.get('input[id=\"name\"]').type('Produto Teste');\ncy.get('input[id=\"amount\"]').type('100');\ncy.get('input[id=\"price\"]').type('10');\n//clica no botao de salvar\ncy.get('button').contains('Cadastrar').click();\n//verifica se o produto foi criado\ncy.contains('Produto Teste');",
+              "err": {},
+              "uuid": "01660984-2471-431f-b593-c133f1c8f85e",
+              "parentUUID": "96f05116-0814-44ff-ae70-19b4039c866a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "editar um produto",
+              "fullTitle": "OdontoManage Stock editar um produto",
+              "timedOut": null,
+              "duration": 4507,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em estoque\ncy.get('a[href=\"/stock\"]').click();\n//verifica se ta na rota de /stock\ncy.url().should('include', '/stock');\n//clica no botao de editar\ncy.get('div').contains('Produto Teste').parent().parent().find('td').eq(4).find('svg').eq(0).click();\n//edita os campos\ncy.get('input[id=\"name\"]').clear().type('Produto Teste Editado');\ncy.get('input[id=\"amount\"]').clear().type('200');\ncy.get('input[id=\"price\"]').clear().type('20');\n//clica no botao de salvar\ncy.get('button').contains('Salvar').click();\n//verifica se o produto foi editado\ncy.contains('Produto Teste Editado');",
+              "err": {},
+              "uuid": "e7b0eb0f-5e70-4828-af07-7ae1ab2b383b",
+              "parentUUID": "96f05116-0814-44ff-ae70-19b4039c866a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "fazer retirada maior que a quantidade de produto no estoque",
+              "fullTitle": "OdontoManage Stock fazer retirada maior que a quantidade de produto no estoque",
+              "timedOut": null,
+              "duration": 2865,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em estoque\ncy.get('a[href=\"/stock\"]').click();\n//verifica se ta na rota de /stock\ncy.url().should('include', '/stock');\n//clica no botao de retirar\ncy.get('div').contains('Produto Teste Editado').parent().parent().find('td').eq(3).find('svg').click();\n//edita os campos\ncy.get('input[id=\"quantity\"]').clear().type('201');\n//clica no botao de retirar\ncy.get('button').contains('OK').click();\n//verifica se o produto foi retirado\ncy.contains('Erro!');",
+              "err": {},
+              "uuid": "d84f3227-6db9-41c1-a34e-94ea128ce1b9",
+              "parentUUID": "96f05116-0814-44ff-ae70-19b4039c866a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deletar um produto",
+              "fullTitle": "OdontoManage Stock deletar um produto",
+              "timedOut": null,
+              "duration": 3272,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em estoque\ncy.get('a[href=\"/stock\"]').click();\n//verifica se ta na rota de /stock\ncy.url().should('include', '/stock');\n//clica no botao de deletar\ncy.get('div').contains('Produto Teste Editado').parent().parent().find('td').eq(4).find('svg').eq(1).click();\n//confirma a exclusao\ncy.get('button').contains('Sim').click();\n//verifica se o produto foi deletado\ncy.contains('Produto Teste Editado').should('not.exist');",
+              "err": {},
+              "uuid": "c16cf874-2bf4-4335-8117-8c901b31dab9",
+              "parentUUID": "96f05116-0814-44ff-ae70-19b4039c866a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "01660984-2471-431f-b593-c133f1c8f85e",
+            "e7b0eb0f-5e70-4828-af07-7ae1ab2b383b",
+            "d84f3227-6db9-41c1-a34e-94ea128ce1b9",
+            "c16cf874-2bf4-4335-8117-8c901b31dab9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16403,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-17T01:29:32.786Z",
+    "end": "2024-09-17T01:29:58.325Z",
+    "duration": 25539,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7ca6f4b2-40a4-4905-8571-1fd8db390c40",
+      "title": "",
+      "fullFile": "cypress\\e2e\\OdontoManage\\PatientsSpec.cy.js",
+      "file": "cypress\\e2e\\OdontoManage\\PatientsSpec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f44fb5b9-7fae-431e-85bc-3788593fa745",
+          "title": "OdontoManage Patients",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "criar um novo paciente",
+              "fullTitle": "OdontoManage Patients criar um novo paciente",
+              "timedOut": null,
+              "duration": 9494,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em pacientes\ncy.get('a[href=\"/patients\"]').click();\n//verifica se ta na rota de /patients\ncy.url().should('include', '/patients');\n//clica em botao de Novo Paciente\ncy.get('button').contains('Novo Paciente').click();\n//preenche os campos\ncy.get('input[id=\"name\"]').type('Paciente Teste');\n//clica no radio button de masculino\ncy.contains('Masculino').click();\n//preenche os campos de data de nascimento\ncy.get('input[id=\"birthDate\"]').type('29/05/2002');\n//preenche o campo de cpf \ncy.get('input[id=\"cpf\"]').type('12345678901');\n//preenche o campo de rg\ncy.get('input[id=\"rg\"]').type('123456789');\n//preenche o campo de telefone\ncy.get('input[id=\"phone\"]').type('123456789');\n//preenche o campo de cep\ncy.get('input[id=\"cep\"]').type('12345678');\n//preenche o campo de rua\ncy.get('input[id=\"street\"]').type('Rua Teste');\n//preenche o campo de bairro\ncy.get('input[id=\"neighborhood\"]').type('Bairro Teste');\n//preenche o campo de cidade\ncy.get('input[id=\"city\"]').type('Cidade Teste');\n//preenche o campo de estado\ncy.get('input[id=\"state\"]').type('Estado Teste');\n//clica no botao de Cadastrar\ncy.get('button').contains('Cadastrar').click();\n//verifica se o paciente foi criado\ncy.contains('Paciente Teste');",
+              "err": {},
+              "uuid": "2e389c67-0296-48d8-b206-0ff683042999",
+              "parentUUID": "f44fb5b9-7fae-431e-85bc-3788593fa745",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "editar um paciente",
+              "fullTitle": "OdontoManage Patients editar um paciente",
+              "timedOut": null,
+              "duration": 9518,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em pacientes\ncy.get('a[href=\"/patients\"]').click();\n//verifica se ta na rota de /patients\ncy.url().should('include', '/patients');\n//clica no botao de editar\ncy.get('div').contains('Rua Teste').parent().parent().find('td').find('svg').eq(0).click();\n//edita os campos\ncy.get('input[id=\"name\"]').clear().type('Paciente Teste Editado');\n//clica no radio button de feminino\ncy.contains('Feminino').click();\n//edita os campos de data de nascimento\ncy.get('input[id=\"birthDate\"]').clear().type('30/05/2002');\n//edita o campo de cpf \ncy.get('input[id=\"cpf\"]').clear().type('12345678902');\n//edita o campo de rg\ncy.get('input[id=\"rg\"]').clear().type('123456788');\n//edita o campo de telefone\ncy.get('input[id=\"phone\"]').clear().type('123456788');\n//edita o campo de cep\ncy.get('input[id=\"cep\"]').clear().type('12345679');\n//edita o campo de rua\ncy.get('input[id=\"street\"]').clear().type('Rua Teste Editado');\n//edita o campo de bairro\ncy.get('input[id=\"neighborhood\"]').clear().type('Bairro Teste Editado');\n//edita o campo de cidade\ncy.get('input[id=\"city\"]').clear().type('Cidade Teste Editado');\n//edita o campo de estado\ncy.get('input[id=\"state\"]').clear().type('Estado Teste Editado');\n//clica no botao de salvar\ncy.get('button').contains('Salvar').click();\n//verifica se o paciente foi editado\ncy.contains('Paciente Teste Editado');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'id')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'id')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at <unknown> (http://localhost:5173/src/pages/Patients/index.jsx?t=1726534425255:163:19)\n    at Array.map (<anonymous>)\n    at Patients (http://localhost:5173/src/pages/Patients/index.jsx?t=1726534425255:161:34)\n    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:12171:26)\n    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:14577:28)\n    at beginWork (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:15912:22)\n    at HTMLUnknownElement.callCallback2 (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:3674:22)\n    at Object.invokeGuardedCallbackDev (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:3699:24)\n    at invokeGuardedCallback (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:3733:39)\n    at beginWork$1 (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:19761:15)\n    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:19194:20)\n    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:19133:13)\n    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:19112:15)\n    at performConcurrentWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:18674:83)\n    at workLoop (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:197:42)\n    at flushWork (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:176:22)\n    at MessagePort.performWorkUntilDeadline (http://localhost:5173/node_modules/.vite/deps/chunk-GRCUVI7T.js?v=6590ea7c:384:29)",
+                "diff": null
+              },
+              "uuid": "5e60e3aa-e6b5-4c7a-94bb-8f483ce5839a",
+              "parentUUID": "f44fb5b9-7fae-431e-85bc-3788593fa745",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deletar um paciente e verificar se o nome do paciente sumiu",
+              "fullTitle": "OdontoManage Patients deletar um paciente e verificar se o nome do paciente sumiu",
+              "timedOut": null,
+              "duration": 4868,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\n//clica em pacientes\ncy.get('a[href=\"/patients\"]').click();\n//verifica se ta na rota de /patients\ncy.url().should('include', '/patients');\n//clica no botao de deletar\ncy.get('div').contains('Paciente Teste').parent().parent().find('td').find('svg').eq(1).click();\n//confirma a exclusao\ncy.get('button').contains('Sim').click();\n//verifica se o paciente foi deletado\ncy.contains('Paciente Teste').should('not.exist');",
+              "err": {},
+              "uuid": "0872c7e3-d188-48e6-bdf4-5e1b5a63135b",
+              "parentUUID": "f44fb5b9-7fae-431e-85bc-3788593fa745",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e389c67-0296-48d8-b206-0ff683042999",
+            "0872c7e3-d188-48e6-bdf4-5e1b5a63135b"
+          ],
+          "failures": [
+            "5e60e3aa-e6b5-4c7a-94bb-8f483ce5839a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 23880,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

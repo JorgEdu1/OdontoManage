@@ -1,0 +1,8 @@
+OdontoManage.UnitTests (3 tests) Success
+  OdontoManage.UnitTests (3 tests) Success
+    ExpenseServiceTests (1 test) Success
+      GetAllPaged_ShouldReturnPagedExpenseDtos Success
+    PatientServiceTests (1 test) Success
+      CreatePatient_WhenValidPatient_ShouldReturnPatientDto Success
+    TreatmentServiceTests (1 test) Success
+      Create_ShouldReturnCreatedTreatmentDto Success
