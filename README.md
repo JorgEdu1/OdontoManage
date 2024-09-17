@@ -48,9 +48,6 @@ Crie o .env na raiz do projeto e configure suas credenciais de conexão com o ba
 | BLUE_200          | ![#65BEF5](https://via.placeholder.com/10/65BEF5?text=+) #65BEF5 |
 
 
-## Demonstração
-
-
 ## Arquitetura
 
 ![diagram (1)](https://github.com/user-attachments/assets/95a9e70e-fffc-4163-b3e6-19baead1b418)
