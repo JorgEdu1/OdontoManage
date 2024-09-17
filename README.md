@@ -52,6 +52,13 @@ Crie o .env na raiz do projeto e configure suas credenciais de conexão com o ba
 
 ![diagram (1)](https://github.com/user-attachments/assets/95a9e70e-fffc-4163-b3e6-19baead1b418)
 
+## Demonstração
+
+
+https://github.com/user-attachments/assets/9a450a7b-70eb-46e1-8af1-cfc5e9efa37b
+
+
+
 ## Autores
 - [@kaynan951](https://github.com/kaynan951)
 - [@antDeivid](https://github.com/antDeivid)
