@@ -57,7 +57,7 @@ Crie o .env na raiz do projeto e configure suas credenciais de conexão com o ba
 
 https://github.com/user-attachments/assets/9a450a7b-70eb-46e1-8af1-cfc5e9efa37b
 
-**Deploy:** https://odontomanage.vercel.app/login
+**Deploy:** https://odontomanage.vercel.app
 
 ## Repositório do back-end 
 
